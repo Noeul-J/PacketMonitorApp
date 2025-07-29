@@ -1,0 +1,24 @@
+﻿<Window x:Class="PacketMonitorWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Security Packet Monitor" Height="600" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+            <ComboBox x:Name="DeviceComboBox" Width="450" Margin="0 0 10 0"/>
+            <Button Content="Start Capture" Width="120" Click="StartCapture_Click"/>
+            <Button Content="Stop Capture" Width="120" Click="StopCapture_Click"/>
+        </StackPanel>
+
+        <ListBox x:Name="PacketLogList" Grid.Row="1"
+                 FontFamily="Consolas"
+                 FontSize="13"
+                 Background="Black"
+                 Foreground="LightGreen"
+                 HorizontalContentAlignment="Left"/>
+    </Grid>
+</Window>
